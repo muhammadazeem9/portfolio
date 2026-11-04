@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+:root {
+  --background: 10 10 10;
+  --foreground: 245 245 245;
+  --accent: 139 92 246;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
