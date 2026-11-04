@@ -1,80 +1,10 @@
-// "use client";
-
-// import { Canvas, useFrame } from "@react-three/fiber";
-// import {
-//   Float,
-//   Icosahedron,
-//   MeshDistortMaterial,
-//   Environment,
-// } from "@react-three/drei";
-// import { useRef, Suspense } from "react";
-// import * as THREE from "three";
-
-// function Orb() {
-//   const meshRef = useRef<THREE.Mesh>(null);
-
-//   useFrame((state) => {
-//     if (meshRef.current) {
-//       meshRef.current.rotation.y = state.clock.elapsedTime * 0.1;
-//       meshRef.current.rotation.x =
-//         Math.sin(state.clock.elapsedTime * 0.3) * 0.1;
-//     }
-//   });
-
-//   return (
-//     <Float speed={1.2} rotationIntensity={0.25} floatIntensity={0.6}>
-//       <Icosahedron ref={meshRef} args={[1.4, 64]}>
-//         <MeshDistortMaterial
-//           color="#8b5cf6"
-//           emissive="#4c1d95"
-//           emissiveIntensity={0.35}
-//           metalness={0.85}
-//           roughness={0.18}
-//           distort={0.28}
-//           speed={1.8}
-//         />
-//       </Icosahedron>
-//     </Float>
-//   );
-// }
-
-// function Scene() {
-//   return (
-//     <>
-//       <ambientLight intensity={0.4} />
-//       <directionalLight position={[4, 4, 4]} intensity={1.2} color="#ffffff" />
-//       <directionalLight
-//         position={[-3, -2, 2]}
-//         intensity={0.4}
-//         color="#8b5cf6"
-//       />
-//       <Orb />
-//       <Environment preset="city" />
-//     </>
-//   );
-// }
-
-// export default function HeroCanvas() {
-//   return (
-//     <Canvas
-//       camera={{ position: [0, 0, 5], fov: 45 }}
-//       dpr={[1, 2]}
-//       gl={{ antialias: true, alpha: true }}
-//       style={{ background: "transparent" }}
-//     >
-//       <Suspense fallback={null}>
-//         <Scene />
-//       </Suspense>
-//     </Canvas>
-//   );
-// }
-
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, Html, Text } from "@react-three/drei";
 import { useRef, Suspense } from "react";
 import * as THREE from "three";
+import { Image } from "@react-three/drei";
 
 const TECH_ITEMS = [
   { name: "React", icon: "/icons/react.svg" },
@@ -128,40 +58,54 @@ function OrbitingIcon({
 
 // Center typography
 
+// function DeveloperCore() {
+//   return (
+//     <group position={[0, 0, 0.2]}>
+//       <Text
+//         position={[0, 0.34, 0]}
+//         fontSize={0.26}
+//         letterSpacing={0.08}
+//         anchorX="center"
+//         anchorY="middle"
+//         color="#ffffff"
+//       >
+//         DESIGN
+//       </Text>
+
+//       <Text
+//         position={[0, 0, 0]}
+//         fontSize={0.17}
+//         anchorX="center"
+//         anchorY="middle"
+//         color="#a78bfa"
+//       >
+//         • BUILD •
+//       </Text>
+
+//       <Text
+//         position={[0, -0.34, 0]}
+//         fontSize={0.26}
+//         letterSpacing={0.08}
+//         anchorX="center"
+//         anchorY="middle"
+//         color="#ffffff"
+//       >
+//         DEPLOY
+//       </Text>
+//     </group>
+//   );
+// }
+
 function DeveloperCore() {
   return (
     <group position={[0, 0, 0.2]}>
-      <Text
-        position={[0, 0.34, 0]}
-        fontSize={0.26}
-        letterSpacing={0.08}
-        anchorX="center"
-        anchorY="middle"
-        color="#ffffff"
-      >
-        DESIGN
-      </Text>
-
-      <Text
+      <Image
+        url="/icons/azeem.png"
         position={[0, 0, 0]}
-        fontSize={0.17}
-        anchorX="center"
-        anchorY="middle"
-        color="#a78bfa"
-      >
-        • BUILD •
-      </Text>
-
-      <Text
-        position={[0, -0.34, 0]}
-        fontSize={0.26}
-        letterSpacing={0.08}
-        anchorX="center"
-        anchorY="middle"
-        color="#ffffff"
-      >
-        DEPLOY
-      </Text>
+        scale={[2.4, 2.4]}
+        transparent
+        radius={1.25}
+      />
     </group>
   );
 }

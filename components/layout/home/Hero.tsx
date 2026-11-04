@@ -86,11 +86,6 @@ export function Hero() {
         </div>
 
         {/* Right: 3D Canvas */}
-        {/* <div className="relative w-full h-[400px] lg:h-[600px]">
-          <HeroCanvas />
-        </div>
-      </div> */}
-
         <div className="relative w-full h-[420px] sm:h-[480px] lg:h-[600px] flex items-center justify-center">
           <div className="relative w-full h-full max-w-[650px] mx-auto">
             <HeroCanvas />
