@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
+import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { FEATURED_PROJECTS, type Project } from "@/lib/projects";
 
 function ProjectRow({ project, index }: { project: Project; index: number }) {
@@ -71,7 +71,7 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-full bg-violet-600 hover:bg-violet-500 transition px-5 py-2 font-medium"
             >
-              Live site <ArrowUpRight size={14} />
+              Live site <FaArrowUpRightFromSquare size={14} />
             </a>
           ) : (
             <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 px-5 py-2 text-neutral-500">
@@ -83,7 +83,7 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
             href={`/portfolio#${project.slug}`}
             className="inline-flex items-center gap-1.5 text-neutral-300 hover:text-white transition"
           >
-            View case study <ArrowUpRight size={14} />
+            View case study <FaArrowUpRightFromSquare size={14} />
           </Link>
         </div>
       </div>
@@ -118,7 +118,7 @@ export function FeaturedProjects() {
             href="/portfolio"
             className="inline-flex items-center gap-1.5 text-sm text-neutral-300 hover:text-white transition"
           >
-            See all projects <ArrowUpRight size={14} />
+            See all projects <FaArrowUpRightFromSquare size={14} />
           </Link>
         </motion.div>
 

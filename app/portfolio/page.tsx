@@ -1,7 +1,18 @@
-export default function Portfolio() {
+import type { Metadata } from "next";
+import { PortfolioHeader } from "@/components/portfolio/PortfolioHeader";
+import { ProjectGrid } from "@/components/portfolio/ProjectGrid";
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description:
+    "Selected projects by Muhammad Azeem — full-stack apps, 3D interfaces, and interactive experiences.",
+};
+
+export default function PortfolioPage() {
   return (
-    <div className="min-h-screen grid place-items-center">
-      <h1>Portfolio</h1>
+    <div className="pt-24">
+      <PortfolioHeader />
+      <ProjectGrid />
     </div>
   );
 }

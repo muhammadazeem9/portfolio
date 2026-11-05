@@ -14,3 +14,22 @@ body {
 .glass {
   @apply bg-white/5 backdrop-blur-md border border-white/10;
 }
+
+/* Global focus ring — visible keyboard navigation */
+:focus-visible {
+  outline: 2px solid rgb(139 92 246 / 0.8);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

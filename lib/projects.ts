@@ -13,15 +13,15 @@ export type Project = {
 
 export const PROJECTS: Project[] = [
   {
-    slug: "project-one",
-    title: "Project One",
-    tagline: "Full-stack SaaS dashboard",
+    slug: "nex-drive",
+    title: "NEX-DRIVE",
+    tagline: "Premium automotive e-commerce",
     description:
-      "A real-time analytics dashboard with role-based access, websocket updates, and a 3D data visualization layer.",
-    stack: ["Next.js", "TypeScript", "Node.js", "MongoDB", "R3F"],
+      "A premium muscle car and performance parts storefront — featuring a curated vehicle collection, service showcase, promotional campaigns, and a clean, conversion-focused product experience.",
+    stack: ["React", "JavaScript", "Tailwind CSS", "Vercel"],
     year: "2025",
-    image: "/projects/project-one.jpg",
-    liveUrl: "",
+    image: "/projects/dashboard.png",
+    liveUrl: "https://nex-drive-react.vercel.app/",
     repoUrl: "",
     featured: true,
   },
