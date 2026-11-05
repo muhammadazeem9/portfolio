@@ -1,7 +1,7 @@
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment, Html, Text } from "@react-three/drei";
+import { Environment, Html } from "@react-three/drei";
 import { useRef, Suspense } from "react";
 import * as THREE from "three";
 import { Image } from "@react-three/drei";
@@ -57,54 +57,15 @@ function OrbitingIcon({
 }
 
 // Center typography
-
-// function DeveloperCore() {
-//   return (
-//     <group position={[0, 0, 0.2]}>
-//       <Text
-//         position={[0, 0.34, 0]}
-//         fontSize={0.26}
-//         letterSpacing={0.08}
-//         anchorX="center"
-//         anchorY="middle"
-//         color="#ffffff"
-//       >
-//         DESIGN
-//       </Text>
-
-//       <Text
-//         position={[0, 0, 0]}
-//         fontSize={0.17}
-//         anchorX="center"
-//         anchorY="middle"
-//         color="#a78bfa"
-//       >
-//         • BUILD •
-//       </Text>
-
-//       <Text
-//         position={[0, -0.34, 0]}
-//         fontSize={0.26}
-//         letterSpacing={0.08}
-//         anchorX="center"
-//         anchorY="middle"
-//         color="#ffffff"
-//       >
-//         DEPLOY
-//       </Text>
-//     </group>
-//   );
-// }
-
 function DeveloperCore() {
   return (
     <group position={[0, 0, 0.2]}>
       <Image
-        url="/icons/azeem.png"
+        url="/icons/mazeem-hero.webp"
         position={[0, 0, 0]}
-        scale={[2.4, 2.4]}
+        scale={[2.4, 2.8]}
         transparent
-        radius={1.25}
+        radius={0.3}
       />
     </group>
   );

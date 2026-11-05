@@ -2,7 +2,6 @@
 
 import dynamic from "next/dynamic";
 import { motion } from "motion/react";
-import { ArrowDown } from "lucide-react";
 
 const HeroCanvas = dynamic(() => import("./HeroCanvas"), {
   ssr: false,
@@ -17,7 +16,7 @@ const name = "Muhammad Azeem";
 
 export function Hero() {
   return (
-    <section className="pt-20 md:pt-0 relative min-h-screen flex items-center overflow-hidden">
+    <section className="pt-20 md:pt-25 lg:pt-0 relative min-h-screen flex items-center overflow-hidden">
       {/* Ambient gradient */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-violet-600/20 rounded-full blur-[120px]" />
