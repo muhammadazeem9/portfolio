@@ -20,7 +20,7 @@ const SOCIALS = [
 ];
 
 export function Footer() {
-  const year = new Date().getFullYear();
+  const year = 2025;
 
   const backToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
