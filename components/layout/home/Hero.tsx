@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 const HeroCanvas = dynamic(() => import("./HeroCanvas"), {
   ssr: false,
@@ -69,18 +70,18 @@ export function Hero() {
             transition={{ duration: 0.6, delay: 1.0 }}
             className="mt-10 flex flex-wrap gap-4"
           >
-            <a
+            <Link
               href="/portfolio"
               className="inline-flex items-center rounded-full bg-violet-600 hover:bg-violet-500 transition px-7 py-3 text-sm font-medium"
             >
               View Work
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
               className="inline-flex items-center rounded-full border border-white/20 hover:border-white/40 hover:bg-white/5 transition px-7 py-3 text-sm font-medium"
             >
               Get in Touch
-            </a>
+            </Link>
           </motion.div>
         </div>
 
